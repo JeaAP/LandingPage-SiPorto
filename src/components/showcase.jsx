@@ -58,7 +58,7 @@ export default function Showcase() {
       </div>
 
       {/* Image Section */}
-      <div className="w-full lg:w-1/2 flex justify-center items-center relative mt-12 lg:mt-0 h-[320px] sm:h-[400px] lg:h-[500px]">
+      <div className="w-screen lg:w-1/2 flex justify-center items-center relative mt-12 lg:mt-0 h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden">
         {images.map((img, index) => {
           let position = "";
           let blur = "";

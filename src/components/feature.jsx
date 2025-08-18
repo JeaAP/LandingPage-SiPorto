@@ -51,7 +51,10 @@ export default function Feature() {
   }, [angle, isAnimating, images.length]);
 
   return (
-    <div id="features" className="feature h-auto sm:h-[80vh] bg-white relative overflow-hidden">
+    <div 
+    id="features" 
+    className="feature h-auto sm:h-[80vh] bg-white relative overflow-hidden w-full max-w-[100vw]"
+    >
       {/* Text section */}
       <div className="w-full px-4 sm:px-16 mt-12 sm:mt-24">
         <h2 className="text-center sm:text-left text-2xl sm:text-5xl font-medium mb-4">
@@ -80,7 +83,7 @@ export default function Feature() {
         </div>
 
         {/* images */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[400px] sm:h-[600px] flex items-center justify-center z-40">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[100vw] sm:max-w-[1200px] h-[400px] sm:h-[600px] flex items-center justify-center z-40">
           {images.map((img, i) => {
             const theta = ((360 / images.length) * i + angle) * (Math.PI / 180);
             const x = center + radius * Math.cos(theta) - 80;
