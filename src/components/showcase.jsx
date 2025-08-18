@@ -58,7 +58,7 @@ export default function Showcase() {
       </div>
 
       {/* Image Section */}
-      <div className="w-screen lg:w-1/2 flex justify-center items-center relative mt-12 lg:mt-0 h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden">
+      <div className="w-screen lg:w-1/2 flex justify-center items-center relative mt-12 lg:mt-0 h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden sm:overflow-visible">
         {images.map((img, index) => {
           let position = "";
           let blur = "";
@@ -85,7 +85,7 @@ export default function Showcase() {
               <img
                 src={img.url}
                 alt={`Portfolio ${index}`}
-                className={`rounded-lg shadow-2xl w-[320px] sm:w-[300px] lg:w-[400px] h-auto object-cover ${blur}`}
+                className={`rounded-lg shadow-2xl w-[260px] sm:w-[300px] lg:w-[400px] h-auto object-cover ${blur}`}
               />
               <p className="mt-3 sm:mt-4 text-center text-black text-sm sm:text-lg font-medium">
                 {img.description}

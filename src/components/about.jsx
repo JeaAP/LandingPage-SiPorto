@@ -37,7 +37,7 @@ export default function About() {
               alt={img.alt}
               className="
                 object-cover 
-                w-[160px] h-[300px] 
+                w-[100px] h-[260px] 
                 md:w-[200px] md:h-[380px] 
                 lg:w-[240px] lg:h-[460px] 
                 transition duration-500 
