@@ -51,12 +51,16 @@ export default function Footer() {
 
         <ul className="space-y-4 sm:space-y-6 text-center lg:text-left text-lg lg:text-2xl">
           <li className="flex items-center justify-center lg:justify-start gap-3 sm:gap-5">
-            <PhoneIcon className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
-            <span>+62 821 3387 838</span>
+            <a href={`https://wa.me/6282113387838`} target="_blank" rel="noreferrer">
+              <PhoneIcon className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
+            </a>
+            <a href={`https://wa.me/6282113387838`} target="_blank" rel="noreferrer">+62 821 1338 7838</a>
           </li>
           <li className="flex items-center justify-center lg:justify-start gap-3 sm:gap-5">
-            <FaInstagram className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-            <span>@sipor.to</span>
+            <a href="https://www.instagram.com/sipor.to/" target="_blank" rel="noreferrer">
+              <FaInstagram className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
+            </a>
+            <a href="https://www.instagram.com/sipor.to/" target="_blank" rel="noreferrer">@sipor.to</a>
           </li>
           <li className="flex items-center justify-center lg:justify-start gap-3 sm:gap-5">
             <EnvelopeIcon className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
