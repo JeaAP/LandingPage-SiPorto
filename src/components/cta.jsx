@@ -20,9 +20,9 @@ export default function Footer() {
     e.preventDefault();
     const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
     const text =
-      `Halo Tim SiPorto,\n\n` +
-      `Nama saya *${formData.name}* (${formData.email}).\n` +
-      `Saya tertarik untuk mengetahui lebih lanjut mengenai layanan SiPorto.\n\n` +
+      `Halo SiPorto,\n\n` +
+      `Saya *${formData.name}*.\n` +
+      `Saya tertarik untuk tahu lebih lanjut tentang layanan SiPorto.\n\n` +
       `Berikut pesan saya:\n${formData.message}\n\n` +
       `Terima kasih.`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
@@ -84,7 +84,7 @@ export default function Footer() {
             className="w-full border border-white/50 bg-white/10 text-white placeholder-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-white"
             required
           />
-          <input
+          {/* <input
             type="email"
             name="email"
             placeholder="Email"
@@ -92,7 +92,7 @@ export default function Footer() {
             onChange={handleChange}
             className="w-full border border-white/50 bg-white/10 text-white placeholder-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-white"
             required
-          />
+          /> */}
           <textarea
             name="message"
             placeholder="Pesanmu..."
