@@ -20,18 +20,23 @@ export default function Feature() {
   const animate = () => {
     setAngle(prev => {
       const diff = targetAngleRef.current - prev;
-      if (Math.abs(diff) < 0.5) return targetAngleRef.current;
-      return prev + diff * 0.1;
+      if (Math.abs(diff) < 0.5) {
+        cancelAnimationFrame(requestRef.current);
+        return targetAngleRef.current;
+      }
+      requestRef.current = requestAnimationFrame(animate);
+      return prev + diff * 0.001;
     });
-    requestRef.current = requestAnimationFrame(animate);
   };
 
   useEffect(() => {
-    requestRef.current = requestAnimationFrame(animate);
-
     const interval = setInterval(() => {
       targetAngleRef.current += 360 / images.length;
+      cancelAnimationFrame(requestRef.current);
+      requestRef.current = requestAnimationFrame(animate);
     }, 5000);
+
+    requestRef.current = requestAnimationFrame(animate);
 
     return () => {
       cancelAnimationFrame(requestRef.current);
